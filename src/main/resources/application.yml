@@ -1,0 +1,9 @@
+server:
+       port: 8099
+
+person1:
+       firstName: Joey
+       lastName: Qiao
+       age: 19
+       hobbies: [hobby0, hobby1]
+       pets: {tom: cat, jack: dog}
