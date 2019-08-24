@@ -3,6 +3,7 @@ package com.qiao;
 import static org.junit.Assert.assertTrue;
 
 import com.qiao.domain.Person;
+import com.qiao.domain.PersonPropertySource;
 import com.qiao.domain.PersonWithAnnotation;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,12 +25,21 @@ public class AppTest
     @Autowired
     private PersonWithAnnotation personWithAnnotation;
 
+    @Autowired
+    private PersonPropertySource personPropertySource;
+
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void personTest()
     {
         System.out.println(person.toString());
     }
+
+    @Test
+    public void personPropertySourceTest() {
+        System.out.println(personPropertySource);
+    }
+
 }

@@ -1,25 +1,21 @@
 package com.qiao.domain;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
 
+@PropertySource(value = {"classpath:person.properties"})
 @Component
-public class PersonWithAnnotation {
-
-    @Value("person1.firstName")
+@ConfigurationProperties(prefix = "person2")
+public class PersonPropertySource {
     private String firstName;
-    @Value("HeiHeiHei")
     private String lastName;
-    @Value("#{11*2}")
-    private Integer age;
+    private int age;
     private List<String> hobbies;
     private Map<String, String> pets;
-
-    @Value("woqiaoxun@ggg.com")
-    private String email;
 
     public String getFirstName() {
         return firstName;
@@ -37,11 +33,11 @@ public class PersonWithAnnotation {
         this.lastName = lastName;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -61,23 +57,14 @@ public class PersonWithAnnotation {
         this.pets = pets;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @Override
     public String toString() {
-        return "PersonWithAnnotation{" +
+        return "PersonPropertySource{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", hobbies=" + hobbies +
                 ", pets=" + pets +
-                ", email='" + email + '\'' +
                 '}';
     }
 }
