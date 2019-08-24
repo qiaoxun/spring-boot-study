@@ -30,6 +30,6 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        System.out.println(personWithAnnotation.toString());
+        System.out.println(person.toString());
     }
 }

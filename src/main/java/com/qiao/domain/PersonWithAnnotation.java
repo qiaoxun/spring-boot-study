@@ -18,6 +18,9 @@ public class PersonWithAnnotation {
     private List<String> hobbies;
     private Map<String, String> pets;
 
+    @Value("woqiaoxunggg.com")
+    private String email;
+
     public String getFirstName() {
         return firstName;
     }
@@ -58,6 +61,14 @@ public class PersonWithAnnotation {
         this.pets = pets;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "PersonWithAnnotation{" +
@@ -66,6 +77,7 @@ public class PersonWithAnnotation {
                 ", age=" + age +
                 ", hobbies=" + hobbies +
                 ", pets=" + pets +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

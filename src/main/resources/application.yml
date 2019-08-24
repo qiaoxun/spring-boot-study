@@ -7,3 +7,4 @@ person1:
        age: 19
        hobbies: [hobby0, hobby1]
        pets: {tom: cat, jack: dog}
+       email: aaa

@@ -2,11 +2,14 @@ package com.qiao.domain;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.List;
 import java.util.Map;
 
 @Component
+@Validated
 @ConfigurationProperties(prefix = "person1")
 public class Person {
     private String firstName;
@@ -14,6 +17,8 @@ public class Person {
     private int age;
     private List<String> hobbies;
     private Map<String, String> pets;
+    @Email
+    private String email;
 
     public String getFirstName() {
         return firstName;
@@ -55,6 +60,14 @@ public class Person {
         this.pets = pets;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -63,6 +76,7 @@ public class Person {
                 ", age=" + age +
                 ", hobbies=" + hobbies +
                 ", pets=" + pets +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
