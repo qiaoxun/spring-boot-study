@@ -2,10 +2,7 @@ package com.qiao;
 
 import static org.junit.Assert.assertTrue;
 
-import com.qiao.domain.Person;
-import com.qiao.domain.PersonImportResource;
-import com.qiao.domain.PersonPropertySource;
-import com.qiao.domain.PersonWithAnnotation;
+import com.qiao.domain.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +30,9 @@ public class AppTest
     @Autowired
     private ApplicationContext context;
 
+    @Autowired
+    private PersonBeanAnnotation personBeanAnnotation;
+
     /**
      * Rigorous Test :-)
      */
@@ -50,6 +50,11 @@ public class AppTest
     @Test
     public void testPersonImportSource() {
         System.out.println(context.containsBean("personImportResource"));
+    }
+
+    @Test
+    public void testPersonBeanAnnotation() {
+        System.out.println(personBeanAnnotation);
     }
 
 }

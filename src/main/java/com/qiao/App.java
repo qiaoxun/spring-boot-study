@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
  *
  */
 
-@ImportResource("classpath:beans.xml")
+//@ImportResource("classpath:beans.xml")
 @SpringBootApplication
 public class App 
 {
