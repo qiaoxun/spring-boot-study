@@ -3,12 +3,14 @@ package com.qiao;
 import static org.junit.Assert.assertTrue;
 
 import com.qiao.domain.Person;
+import com.qiao.domain.PersonImportResource;
 import com.qiao.domain.PersonPropertySource;
 import com.qiao.domain.PersonWithAnnotation;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -28,6 +30,9 @@ public class AppTest
     @Autowired
     private PersonPropertySource personPropertySource;
 
+    @Autowired
+    private ApplicationContext context;
+
     /**
      * Rigorous Test :-)
      */
@@ -40,6 +45,11 @@ public class AppTest
     @Test
     public void personPropertySourceTest() {
         System.out.println(personPropertySource);
+    }
+
+    @Test
+    public void testPersonImportSource() {
+        System.out.println(context.containsBean("personImportResource"));
     }
 
 }
