@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 import com.qiao.domain.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +19,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class AppTest 
 {
+    Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private Person person;
@@ -55,6 +58,15 @@ public class AppTest
     @Test
     public void testPersonBeanAnnotation() {
         System.out.println(personBeanAnnotation);
+    }
+
+    @Test
+    public void testLog() {
+        logger.trace("trace");
+        logger.debug("debug");
+        logger.info("info");
+        logger.warn("warn");
+        logger.error("error");
     }
 
 }
