@@ -1,4 +1,4 @@
-package com.qiao.domain.cache;
+package com.study.cache.domain;
 
 import java.sql.Date;
 import java.sql.Time;
