@@ -11,9 +11,10 @@
   <modules>
     <module>cache-study</module>
       <module>properties-log</module>
+    <module>aop-aspect</module>
   </modules>
 
-  <name>springboot-study</name>
+  <name>spring-boot-study</name>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
