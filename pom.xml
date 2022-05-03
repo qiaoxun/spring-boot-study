@@ -13,6 +13,7 @@
       <module>properties-log</module>
     <module>aop-aspect</module>
     <module>actuator</module>
+    <module>i18n</module>
   </modules>
 
   <name>spring-boot-study</name>

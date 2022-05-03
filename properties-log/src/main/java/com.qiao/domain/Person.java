@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
-import javax.validation.constraints.Email;
+//import javax.validation.constraints.Email;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +17,7 @@ public class Person {
     private int age;
     private List<String> hobbies;
     private Map<String, String> pets;
-    @Email
+//    @Email
     private String email;
 
     public String getFirstName() {
