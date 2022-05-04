@@ -14,6 +14,7 @@
     <module>aop-aspect</module>
     <module>actuator</module>
     <module>i18n</module>
+      <module>interceptor</module>
   </modules>
 
   <name>spring-boot-study</name>
